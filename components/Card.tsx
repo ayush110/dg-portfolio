@@ -30,7 +30,10 @@ const Card = ({ title, description, imgSrc, skills, href, github }) => (
         <p className="prose mb-3 max-w-none text-gray-500 dark:text-gray-400">{description}</p>
         <div className=" mt-[12px]  flex-wrap items-center ">
           {skills?.map((skill) => (
-            <div className=" text-tiny text-custom_black-800 border-custom_black-500 mr-4 mb-2 inline-block   rounded-full border py-[2px] px-[12px]">
+            <div
+              key={skill}
+              className=" text-tiny text-custom_black-800 border-custom_black-500 mr-4 mb-2 inline-block   rounded-full border py-[2px] px-[12px]"
+            >
               <p>{skill}</p>
             </div>
           ))}
