@@ -13,7 +13,7 @@ export default function Projects() {
             projects
           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            Projects I'm working on or have worked on in the past.
+            Just some of the things I've worked on. Check out my github for more!
           </p>
         </div>
         <div className="container py-12">
@@ -24,7 +24,9 @@ export default function Projects() {
                 title={d.title}
                 description={d.description}
                 imgSrc={d.imgSrc}
+                skills={d.skills}
                 href={d.href}
+                github={d.github}
               />
             ))}
           </div>

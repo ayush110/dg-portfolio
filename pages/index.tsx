@@ -1,6 +1,8 @@
 import Link from '@/components/Link'
 import { PageSEO } from '@/components/SEO'
 import Tag from '@/components/Tag'
+import Image from '@/components/Image'
+import avatar from 'public/static/images/avatar.jpeg'
 import siteMetadata from '@/data/siteMetadata'
 import { formatDate } from 'pliny/utils/formatDate'
 import { sortedBlogPost, allCoreContent } from 'pliny/utils/contentlayer'
@@ -50,24 +52,30 @@ export const HeroSection = (
         {siteMetadata.description}
       </p>
       <p className="text-justify text-lg leading-7 text-gray-900 dark:text-gray-100 ">
-        Welcome to my <span className="font-bold">personal wiki</span> - a place where I share my
-        knowledge gained in the field of <span className="font-bold">web development</span>. You can
-        also find my thoughts on self-development, work automation and pop culture here. In the{' '}
-        <span className="font-bold">projects</span> tab you can find projects I've worked on or am
-        currently working on. Make yourself comfortable.
+        Welcome to my personal wiki - a digital space filled with all the cool things I've done and
+        thoughts I've had. Whether you're here to explore my projects, read my musings, or just
+        stalk me, I'm thrilled to have you here. This website is my virtual playground, where I
+        showcase my inner weirdness and unleash my creativity on the world.
       </p>
       <div>
         <Link
           href={`/about`}
-          className="text-primary-500 underline hover:text-primary-600 dark:hover:text-primary-400"
+          className="text-primary-500  hover:text-primary-600 dark:hover:text-primary-400"
           aria-label={`Read about me`}
         >
           Learn more about me &rarr;
         </Link>
       </div>
     </div>
-    <div className=" hidden grow items-center justify-center md:flex">
-      <span className="animate-wave -mt-4 text-9xl">👋</span>
+
+    <div className="hidden items-center  justify-center md:flex  md:grow">
+      <Image
+        src={avatar}
+        alt="avatar"
+        width={192}
+        height={192}
+        className="h-48 w-48 rounded-full"
+      />
     </div>
   </section>
 )
