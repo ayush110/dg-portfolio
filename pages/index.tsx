@@ -49,7 +49,7 @@ export const HeroSection = (
       <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
         {siteMetadata.description}
       </p>
-      <p className="text-justify text-lg leading-7 text-gray-900 dark:text-gray-100">
+      <p className="text-justify text-lg leading-7 text-gray-900 dark:text-gray-100 ">
         Welcome to my <span className="font-bold">personal wiki</span> - a place where I share my
         knowledge gained in the field of <span className="font-bold">web development</span>. You can
         also find my thoughts on self-development, work automation and pop culture here. In the{' '}
@@ -66,7 +66,7 @@ export const HeroSection = (
         </Link>
       </div>
     </div>
-    <div className="flex grow items-center justify-center">
+    <div className=" hidden grow items-center justify-center md:flex">
       <span className="animate-wave -mt-4 text-9xl">👋</span>
     </div>
   </section>
