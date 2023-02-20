@@ -15,7 +15,7 @@ const font = Noto_Serif_Khojki({
 const LayoutWrapper = ({ children }: Props) => {
   return (
     <SectionContainer>
-      <div className={`${font.className} flex h-screen flex-col justify-between font-sans`}>
+      <div className={`${font.className} font flex h-screen flex-col justify-between`}>
         <Header />
         <main className="mb-auto">{children}</main>
         <Footer />

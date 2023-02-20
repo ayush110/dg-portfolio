@@ -9,19 +9,19 @@ import { useRouter } from 'next/router'
 const Header = () => {
   const { pathname } = useRouter()
   return (
-    <header className="flex items-center justify-between py-10">
+    <header className="flex items-center py-10">
       <div>
         <Link href="/" aria-label={siteMetadata.headerTitle}>
           <div className="flex items-center justify-between">
-            <div className="mr-3">
-              <Image
-                alt={'Logo of ' + siteMetadata.headerTitle}
-                src={'/static/images/face.png'}
-                className="object-cover object-center"
-                width={40}
-                height={40}
-              />
-            </div>
+            {
+              <div
+                className={`rounded-lg font-medium text-gray-900  dark:text-gray-100  sm:pr-4 ${
+                  pathname === '/' ? 'underline' : ''
+                }`}
+              >
+                home
+              </div>
+            }
             {typeof siteMetadata.headerTitle === 'string' ? (
               <div className="hidden h-6 text-2xl font-semibold sm:block">
                 {siteMetadata.headerTitle}
@@ -38,7 +38,7 @@ const Header = () => {
             <Link
               key={link.title}
               href={link.href}
-              className={`p-1 font-medium text-gray-900 dark:text-gray-100 sm:p-4 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg ${
+              className={`rounded-lg p-1 font-medium text-gray-900  dark:text-gray-100  sm:p-4 ${
                 pathname === link.href ? 'underline' : ''
               }`}
             >

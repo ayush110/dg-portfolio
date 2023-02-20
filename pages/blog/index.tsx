@@ -32,12 +32,12 @@ export default function BlogPage({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
-      <PageSEO title={`Blog • ${siteMetadata.author}`} description={siteMetadata.description} />
+      <PageSEO title={`blog • ${siteMetadata.author}`} description={siteMetadata.description} />
       <ListLayout
         posts={posts}
         initialDisplayPosts={initialDisplayPosts}
         pagination={pagination}
-        title="All posts"
+        title="all posts"
       />
     </>
   )
