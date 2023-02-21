@@ -3,7 +3,6 @@ import headerNavLinks from '@/data/headerNavLinks'
 import Link from './Link'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
-import Image from 'next/image'
 import { useRouter } from 'next/router'
 
 const Header = () => {

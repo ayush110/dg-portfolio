@@ -51,7 +51,7 @@ export const HeroSection = (
       <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
         {siteMetadata.description}
       </p>
-      <p className="text-justify text-lg leading-7 text-gray-900 dark:text-gray-100 ">
+      <p className=" flex shrink text-lg leading-7 text-gray-900 dark:text-gray-100">
         Welcome to my personal wiki - a digital space filled with all the cool things I've done and
         thoughts I've had. Whether you're here to explore my projects, read my musings, or just
         stalk me, I'm thrilled to have you here. This website is my virtual playground, where I
@@ -68,13 +68,13 @@ export const HeroSection = (
       </div>
     </div>
 
-    <div className="hidden items-center  justify-center md:flex  md:grow">
+    <div className=" hidden  items-center  justify-center  md:flex md:shrink-0 md:grow">
       <Image
         src={avatar}
         alt="avatar"
         width={192}
         height={192}
-        className="h-48 w-48 rounded-full"
+        className="h-48 w-48 rounded-full "
       />
     </div>
   </section>
