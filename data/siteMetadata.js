@@ -1,7 +1,7 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
   title: 'ayush shah',
-  author: 'ayush shah',
+  author: 'Ayush Shah',
   headerTitle: '',
   description: 'Systems Design Engineering student at UWaterloo.',
   language: 'en-us',

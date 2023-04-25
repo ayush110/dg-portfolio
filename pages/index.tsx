@@ -22,7 +22,7 @@ export const getStaticProps = async () => {
 export default function Home({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
-      <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
+      <PageSEO title={siteMetadata.author} description={siteMetadata.description} />
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         {HeroSection}
         <RecentPosts posts={posts} />
