@@ -1,5 +1,4 @@
 // @ts-check
-const { fontFamily } = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
 
 // ../node_modules/pliny/dist/**/*.mjs is needed for monorepo setup
@@ -33,6 +32,7 @@ module.exports = {
       colors: {
         primary: colors.teal,
         gray: colors.neutral,
+        black: colors.black,
       },
       typography: (theme) => ({
         DEFAULT: {
@@ -105,7 +105,7 @@ module.exports = {
         },
         dark: {
           css: {
-            color: theme('colors.gray.300'),
+            color: theme('colors. '),
             a: {
               color: theme('colors.primary.500'),
               '&:hover': {
