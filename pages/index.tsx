@@ -9,6 +9,9 @@ import { sortedBlogPost, allCoreContent } from 'pliny/utils/contentlayer'
 import { InferGetStaticPropsType } from 'next'
 import { allBlogs } from 'contentlayer/generated'
 import type { Blog } from 'contentlayer/generated'
+import { CiMail } from 'react-icons/ci'
+import { CiLinkedin } from 'react-icons/ci'
+import { CiTwitter } from 'react-icons/ci'
 
 const MAX_DISPLAY = 3
 
@@ -23,21 +26,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
   return (
     <>
       <PageSEO title={siteMetadata.author} description={siteMetadata.description} />
-      <div className="divide-y divide-gray-200 dark:divide-gray-700">
-        {HeroSection}
-        <RecentPosts posts={posts} />
-      </div>
-      {posts.length > MAX_DISPLAY && (
-        <div className="flex justify-end text-base font-medium leading-6">
-          <Link
-            href="/blog"
-            className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-            aria-label="Wszystkie posty"
-          >
-            All posts &rarr;
-          </Link>
-        </div>
-      )}
+      <div className="divide-y divide-gray-200 dark:divide-gray-700">{HeroSection}</div>
     </>
   )
 }
@@ -48,23 +37,52 @@ export const HeroSection = (
       <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
         ayush shah
       </h1>
-      <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-        {siteMetadata.description}
-      </p>
-      <p className=" flex shrink text-lg leading-7 text-gray-900 dark:text-gray-100">
-        Welcome to my personal wiki - a digital space filled with all the cool things I've done and
-        thoughts I've had. Whether you're here to explore my projects, read my musings, or just
-        stalk me, I'm thrilled to have you here. This website is my virtual playground, where I
-        showcase my inner weirdness and unleash my creativity on the world.
-      </p>
-      <div>
+      <br></br>
+
+      <p className="shrink  text-lg leading-7 text-gray-900  dark:text-gray-100">
+        Welcome! I'm a second year{' '}
         <Link
-          href={`/about`}
-          className="text-primary-500  hover:text-primary-600 dark:hover:text-primary-400"
-          aria-label={`Read about me`}
+          className="underline underline-offset-4"
+          href="https://uwaterloo.ca/systems-design-engineering/about-systems-design-engineering/what-systems-design-engineering"
         >
-          Learn more about me &rarr;
-        </Link>
+          systems design engineering
+        </Link>{' '}
+        student at UWaterloo who loves to learn and build things.
+      </p>
+      <p className="  shrink text-lg leading-7 text-gray-900 dark:text-gray-100">
+        I often think and{' '}
+        <Link className="underline underline-offset-4" href="/blog">
+          write
+        </Link>{' '}
+        about tech and personal growth. My current mission is to leverage my interests in robotics,
+        machine learning and climate to impact the world.
+      </p>
+      <p className="  shrink text-lg leading-7 text-gray-900 dark:text-gray-100">
+        Currently interning at{' '}
+        <Link className="underline underline-offset-4" href="https://miovision.com/">
+          Miovision
+        </Link>{' '}
+        - helping build communities with better mobility. In the past I worked with Geotab, BMO, and
+        STEM Fellowship.
+      </p>
+
+      <div>
+        <div className="flex">
+          <p className=" flex shrink text-lg leading-7 text-gray-900 dark:text-gray-100">
+            Want to work together? Reach out &rarr; &nbsp;
+          </p>
+          <div className="flex">
+            <Link href={`mailto:${siteMetadata.email}`}>
+              <CiMail size={32} />
+            </Link>
+            <Link href={siteMetadata.linkedin}>
+              <CiLinkedin size={32} />
+            </Link>
+            <Link href={siteMetadata.twitter}>
+              <CiTwitter size={32} />
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -79,7 +97,7 @@ export const HeroSection = (
     </div>
   </section>
 )
-
+/*
 export const RecentPosts = ({ posts }: { posts: Omit<Blog, 'body' | '_raw' | '_id'>[] }) => {
   return (
     <section className="pt-8">
@@ -135,3 +153,4 @@ export const RecentPosts = ({ posts }: { posts: Omit<Blog, 'body' | '_raw' | '_i
     </section>
   )
 }
+*/
