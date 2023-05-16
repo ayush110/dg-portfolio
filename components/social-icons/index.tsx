@@ -16,7 +16,7 @@ const components = {
   twitter: Twitter,
 }
 
-const Icon = ({ kind, href, size = 8 }) => {
+const Icon = ({ kind, href, size = 6 }) => {
   if (!href || (kind === 'mail' && !/^mailto:\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/.test(href)))
     return null
 

@@ -14,6 +14,7 @@ const siteMetadata = {
   email: 'ayush110shah@gmail.com',
   github: 'https://github.com/ayush110',
   linkedin: 'https://www.linkedin.com/in/shah-ayush/',
+  twitter: 'https://twitter.com/ayushshah110',
   locale: 'en-US',
   analytics: {
     plausibleDataDomain: 'programaniak.vercel.app',
