@@ -8,7 +8,7 @@ import { MdMail } from 'react-icons/md'
 export default function Footer() {
   return (
     <footer>
-      <div className="text-grey my-16 flex flex-col items-center text-xs text-gray-500  hover:text-black">
+      <div className="text-grey my-16 flex flex-col items-center text-xs text-gray-400 hover:text-black dark:hover:text-white">
         <div className="flex ">
           <Link
             className="mr-4 flex inline-flex items-center "
