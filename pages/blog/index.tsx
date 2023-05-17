@@ -37,7 +37,7 @@ export default function BlogPage({
         posts={posts}
         initialDisplayPosts={initialDisplayPosts}
         pagination={pagination}
-        title="all posts"
+        title="thought vault"
       />
     </>
   )
