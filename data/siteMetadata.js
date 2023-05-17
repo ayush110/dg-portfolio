@@ -15,6 +15,7 @@ const siteMetadata = {
   github: 'https://github.com/ayush110',
   linkedin: 'https://www.linkedin.com/in/shah-ayush/',
   twitter: 'https://twitter.com/ayushshah110',
+  spotify: 'https://open.spotify.com/show/67O3AJhfXw7CPT4mO2aAG5?si=b15309242dcd4c76&nd=1',
   locale: 'en-US',
   analytics: {
     plausibleDataDomain: 'programaniak.vercel.app',
