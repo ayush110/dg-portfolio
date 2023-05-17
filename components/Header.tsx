@@ -15,7 +15,7 @@ const Header = () => {
             {
               <div
                 className={`rounded-lg font-medium text-gray-900  dark:text-gray-100  sm:pr-4 ${
-                  pathname === '/' ? 'underline' : ''
+                  pathname === '/' ? 'underline underline-offset-8' : ''
                 }`}
               >
                 home
@@ -38,7 +38,7 @@ const Header = () => {
               key={link.title}
               href={link.href}
               className={`rounded-lg p-1 font-medium text-gray-900  dark:text-gray-100  sm:p-4 ${
-                pathname === link.href ? 'underline' : ''
+                pathname === link.href ? 'underline underline-offset-8' : ''
               }`}
             >
               {link.title}
