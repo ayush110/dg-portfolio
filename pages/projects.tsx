@@ -2,6 +2,7 @@ import siteMetadata from '@/data/siteMetadata'
 import projectsData from '@/data/projectsData'
 import Card from '@/components/Card'
 import { PageSEO } from '@/components/SEO'
+import Link from 'next/link'
 
 export default function Projects() {
   return (
@@ -13,7 +14,11 @@ export default function Projects() {
             projects
           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            Just some of the things I've worked on. Check out my github for more!
+            Just some of the things I've worked on. Check out my{' '}
+            <Link className="underline underline-offset-4" href={siteMetadata.github}>
+              github
+            </Link>{' '}
+            for more!
           </p>
         </div>
         <div className="container py-12">
