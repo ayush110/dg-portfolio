@@ -14,8 +14,8 @@ const Header = () => {
           <div className="flex items-center justify-between">
             {
               <div
-                className={`rounded-lg pr-4 font-medium  text-gray-900  dark:text-gray-100 ${
-                  pathname === '/' ? 'underline underline-offset-8' : ''
+                className={`rounded-lg pr-6 text-gray-900  dark:text-gray-100 ${
+                  pathname === '/' ? 'font-bold' : ''
                 }`}
               >
                 home
@@ -37,8 +37,8 @@ const Header = () => {
             <Link
               key={link.title}
               href={link.href}
-              className={`rounded-lg  p-5 font-medium  text-gray-900  dark:text-gray-100 ${
-                pathname === link.href ? 'underline underline-offset-8' : ''
+              className={`rounded-lg  p-6   text-gray-900  dark:text-gray-100 ${
+                pathname === link.href ? 'font-bold' : ''
               }`}
             >
               {link.title}
