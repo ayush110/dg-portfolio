@@ -14,13 +14,13 @@ export default function Current() {
         </li>
         <li>
           Diving deep into the robotics and embedded world - follow my journey{' '}
-          <Link className="underline underline-offset-4" href="">
+          <Link className="underline underline-offset-4" href="/">
             here
           </Link>{' '}
         </li>
         <li>
           Catching up on my{' '}
-          <Link className="underline underline-offset-4" href="">
+          <Link className="underline underline-offset-4" href="/">
             reading log
           </Link>{' '}
         </li>
