@@ -1,10 +1,7 @@
 import Link from '@/components/Link'
 import { PageSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
-import { sortedBlogPost, allCoreContent } from 'pliny/utils/contentlayer'
-import { InferGetStaticPropsType } from 'next'
-import { allBlogs } from 'contentlayer/generated'
-import type { Blog } from 'contentlayer/generated'
+import Current from '@/components/Current'
 
 export default function Home() {
   return (
@@ -22,7 +19,7 @@ export const HeroSection = (
         ayush shah
       </h1>
       <br></br>
-      <div className="shrink  text-2xl leading-7 text-gray-900  dark:text-gray-100 md:max-w-xl">
+      <div className=" shrink text-2xl leading-7  text-gray-900 dark:text-gray-100 md:max-w-xl">
         <p className="mb-8">
           Welcome! I'm a third year{' '}
           <Link
@@ -42,6 +39,10 @@ export const HeroSection = (
             ayush110shah@gmail.com!
           </Link>
         </p>
+      </div>
+      <div>
+        <hr className="mt-20 mb-12 w-96"></hr>
+        <Current />
       </div>
     </div>
   </section>

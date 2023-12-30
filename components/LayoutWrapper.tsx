@@ -15,9 +15,7 @@ const LayoutWrapper = ({ children }: Props) => {
       <div className={`${header.className} font flex h-screen flex-col justify-between`}>
         <Header />
         <main className="mb-auto">{children}</main>
-        <div className={`${footer.className} font `}>
-          <Footer />
-        </div>
+        <div className={`${footer.className} font `}></div>
       </div>
     </SectionContainer>
   )
