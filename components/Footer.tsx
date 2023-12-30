@@ -1,45 +1,43 @@
 import siteMetadata from '@/data/siteMetadata'
-import Icon from '@/components/social-icons'
 import Link from 'next/link'
-import { CiMail, CiLinkedin, CiTwitter } from 'react-icons/ci'
-import { BsGithub, BsLinkedin, BsMailbox, BsSpotify, BsTwitch, BsTwitter } from 'react-icons/bs'
-import { MdMail } from 'react-icons/md'
+import { BsSpotify } from 'react-icons/bs'
 
 export default function Footer() {
   return (
     <footer>
-      <div className="text-grey my-16 flex flex-col items-center text-xs text-gray-400 ">
-        <div className="flex ">
+      <div className="text-xs  ">
+        <div className=" text-right">
           <Link
-            className="mr-4 flex inline-flex items-center  hover:text-black dark:hover:text-white"
+            className="hover:text-black dark:hover:text-transparent"
             href={`mailto:${siteMetadata.email}`}
           >
             {siteMetadata.email}
           </Link>
 
           <Link
-            className="mx-4 inline-flex items-center hover:text-black dark:hover:text-white "
-            href={siteMetadata.linkedin}
-          >
-            <BsLinkedin className="mr-1 mt-1" /> shah-ayush
-          </Link>
-          <Link
-            className=" mx-4 flex inline-flex items-center hover:text-black dark:hover:text-white"
-            href={siteMetadata.twitter}
-          >
-            <BsTwitter className="mr-1 mt-1" /> ayushshah110
-          </Link>
-          <Link
-            className="mx-4 flex inline-flex items-center hover:text-black dark:hover:text-white"
+            className="flex items-center justify-end text-right hover:text-black dark:hover:text-transparent"
             href={siteMetadata.spotify}
           >
-            <BsSpotify className="mr-1 mt-1" /> A Side of Chai
+            a side of chai
+            <BsSpotify className="ml-1 " />
           </Link>
           <Link
-            className=" mx-4 flex inline-flex items-center hover:text-black dark:hover:text-white"
+            className="flex justify-end   hover:text-black dark:hover:text-transparent "
+            href={siteMetadata.linkedin}
+          >
+            linkedin
+          </Link>
+          <Link
+            className=" flex justify-end  hover:text-black dark:hover:text-transparent"
+            href={siteMetadata.twitter}
+          >
+            twitter
+          </Link>
+          <Link
+            className="justify-end   hover:text-black dark:hover:text-transparent"
             href={siteMetadata.github}
           >
-            <BsGithub className="mr-1 mt-1" /> ayush110
+            github
           </Link>
         </div>
       </div>
