@@ -8,13 +8,13 @@ import { useRouter } from 'next/router'
 const Header = () => {
   const { pathname } = useRouter()
   return (
-    <header className="flex items-center py-10">
+    <header className="flex items-center pt-10 sm:py-10">
       <div>
         <Link href="/" aria-label={siteMetadata.headerTitle}>
           <div className="flex items-center justify-between">
             {
               <div
-                className={`rounded-lg font-medium text-gray-900  dark:text-gray-100  sm:pr-4 ${
+                className={`rounded-lg pr-4 font-medium  text-gray-900  dark:text-gray-100 ${
                   pathname === '/' ? 'underline underline-offset-8' : ''
                 }`}
               >
@@ -32,12 +32,12 @@ const Header = () => {
         </Link>
       </div>
       <div className="flex items-center text-base leading-5">
-        <div className="hidden sm:block">
+        <div className="">
           {headerNavLinks.map((link) => (
             <Link
               key={link.title}
               href={link.href}
-              className={`rounded-lg p-1 font-medium text-gray-900  dark:text-gray-100  sm:p-4 ${
+              className={`rounded-lg  p-5 font-medium  text-gray-900  dark:text-gray-100 ${
                 pathname === link.href ? 'underline underline-offset-8' : ''
               }`}
             >
@@ -45,7 +45,9 @@ const Header = () => {
             </Link>
           ))}
         </div>
-        <ThemeSwitch />
+        <div className="flex">
+          <ThemeSwitch />
+        </div>
         <MobileNav />
       </div>
     </header>
