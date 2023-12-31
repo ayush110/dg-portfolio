@@ -55,7 +55,7 @@ const Header = () => {
 
       {/* Conditionally render the Footer only on the home page */}
       {isHomePage && (
-        <div className="absolute top-10 right-0">
+        <div className="top-10 right-0 sm:absolute  sm:flex sm:flex-col">
           <Footer />
         </div>
       )}
