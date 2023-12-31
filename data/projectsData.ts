@@ -1,10 +1,5 @@
 const projectsData = [
-  {
-    title: 'Watolink',
-    description: `Won 1st Place at NeurotechX Competition with SSVEP Mind-Speech Interface. Now working towards creating a brain-controlled wheelchair.`,
-    skills: ['C++', 'Python','Nvidia Jetson'],
-    href: 'https://www.watolink.ca/',
-  },
+
   {
     title: 'Pick and Place Robot',
     description: `5 part pick and place mechanism powered by Arduino. Wrote custom path planning algorithm.`,
