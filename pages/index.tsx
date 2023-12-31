@@ -19,11 +19,11 @@ export const HeroSection = (
         ayush shah
       </h1>
       <br></br>
-      <div className=" shrink text-2xl leading-7  text-gray-900 dark:text-gray-100 md:max-w-xl">
+      <div className=" shrink text-2xl font-light leading-7  text-gray-900 dark:text-gray-100 md:max-w-xl">
         <p className="mb-8">
           Welcome! I'm a third year{' '}
           <Link
-            className="bg-cyan-900/40 px-2"
+            className="bg-cyan-900/40 "
             href="https://uwaterloo.ca/systems-design-engineering/about-systems-design-engineering/what-systems-design-engineering"
           >
             {' '}
@@ -34,7 +34,7 @@ export const HeroSection = (
         <p className="mb-8">I love solving problems and making things.</p>
         <p>
           Reach out at{' '}
-          <Link className="bg-cyan-900/40 px-2" href="mailto:{ayush110shah@gmail.com}">
+          <Link className="bg-cyan-900/40 " href="mailto:{ayush110shah@gmail.com}">
             {' '}
             ayush110shah@gmail.com!
           </Link>

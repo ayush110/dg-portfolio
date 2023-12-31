@@ -9,7 +9,7 @@ import Footer from './Footer'
 const Header = () => {
   const { pathname } = useRouter()
   return (
-    <header className=" relative flex pt-10 sm:py-10">
+    <header className=" relative flex pt-10 font-thin sm:py-10">
       <div className=" flex items-center ">
         <div>
           <Link href="/" aria-label={siteMetadata.headerTitle}>
@@ -17,16 +17,14 @@ const Header = () => {
               {
                 <div
                   className={`rounded-lg pr-6 text-gray-900  dark:text-gray-100 ${
-                    pathname === '/' ? 'font-bold' : ''
+                    pathname === '/' ? 'font-normal' : ''
                   }`}
                 >
                   home
                 </div>
               }
               {typeof siteMetadata.headerTitle === 'string' ? (
-                <div className="hidden h-6 text-2xl font-semibold sm:block">
-                  {siteMetadata.headerTitle}
-                </div>
+                <div className="hidden h-6 text-2xl  sm:block">{siteMetadata.headerTitle}</div>
               ) : (
                 siteMetadata.headerTitle
               )}
@@ -40,7 +38,7 @@ const Header = () => {
                 key={link.title}
                 href={link.href}
                 className={`rounded-lg  p-6   text-gray-900  dark:text-gray-100 ${
-                  pathname === link.href ? 'font-bold' : ''
+                  pathname === link.href ? 'font-normal' : ''
                 }`}
               >
                 {link.title}
