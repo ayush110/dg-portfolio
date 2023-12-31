@@ -4,7 +4,7 @@ export default function Current() {
   return (
     <div className=" shrink    text-gray-900 dark:text-gray-100 ">
       <p className="mb-2 text-2xl">Currently I'm</p>
-      <ul className="ml-4 list-disc font-light leading-snug">
+      <ul className="ml-4 list-disc leading-snug dark:font-light">
         <li>
           Exploring climate tech at{' '}
           <Link className="underline underline-offset-4" href="https://www.floodbase.com/">

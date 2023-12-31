@@ -23,7 +23,7 @@ export const HeroSection = (
         <p className="mb-8">
           Welcome! I'm a third year{' '}
           <Link
-            className="bg-cyan-900/40 "
+            className="bg-emerald-900/25 dark:bg-cyan-900/40 "
             href="https://uwaterloo.ca/systems-design-engineering/about-systems-design-engineering/what-systems-design-engineering"
           >
             {' '}
@@ -34,7 +34,10 @@ export const HeroSection = (
         <p className="mb-8">I love solving problems and making things.</p>
         <p>
           Reach out at{' '}
-          <Link className="bg-cyan-900/40 " href="mailto:{ayush110shah@gmail.com}">
+          <Link
+            className="bg-emerald-900/25 dark:bg-cyan-900/40 "
+            href="mailto:{ayush110shah@gmail.com}"
+          >
             {' '}
             ayush110shah@gmail.com!
           </Link>

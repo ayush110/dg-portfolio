@@ -8,23 +8,25 @@ import Footer from './Footer'
 
 const Header = () => {
   const { pathname } = useRouter()
+
+  // Check if the user is on the home page
+  const isHomePage = pathname === '/'
+
   return (
-    <header className=" relative flex pt-10 font-thin sm:py-10">
-      <div className=" flex items-center ">
+    <header className="relative flex pt-10 dark:font-thin sm:py-10">
+      <div className="flex items-center">
         <div>
           <Link href="/" aria-label={siteMetadata.headerTitle}>
             <div className="flex items-center justify-between">
-              {
-                <div
-                  className={`rounded-lg pr-6 text-gray-900  dark:text-gray-100 ${
-                    pathname === '/' ? 'font-normal' : ''
-                  }`}
-                >
-                  home
-                </div>
-              }
+              <div
+                className={`rounded-lg pr-6 text-gray-900 dark:text-gray-100 ${
+                  isHomePage ? 'font-bold dark:font-normal' : ''
+                }`}
+              >
+                home
+              </div>
               {typeof siteMetadata.headerTitle === 'string' ? (
-                <div className="hidden h-6 text-2xl  sm:block">{siteMetadata.headerTitle}</div>
+                <div className="hidden h-6 text-2xl sm:block">{siteMetadata.headerTitle}</div>
               ) : (
                 siteMetadata.headerTitle
               )}
@@ -37,8 +39,8 @@ const Header = () => {
               <Link
                 key={link.title}
                 href={link.href}
-                className={`rounded-lg  p-6   text-gray-900  dark:text-gray-100 ${
-                  pathname === link.href ? 'font-normal' : ''
+                className={`rounded-lg p-6 text-gray-900 dark:text-gray-100 ${
+                  pathname === link.href ? 'font-bold dark:font-normal' : ''
                 }`}
               >
                 {link.title}
@@ -50,9 +52,13 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="absolute top-10 right-0">
-        <Footer />
-      </div>
+
+      {/* Conditionally render the Footer only on the home page */}
+      {isHomePage && (
+        <div className="absolute top-10 right-0">
+          <Footer />
+        </div>
+      )}
 
       <MobileNav />
     </header>

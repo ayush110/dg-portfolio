@@ -78,9 +78,11 @@ export default function ListLayout({
     <>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
-            {title}
-          </h1>
+          <p className="dark:font-light">
+            Just a collection of thoughts, writing or ideas that I wish to keep with me, with a
+            little bit of originality sprinkled in. While I don't always adhere to every detail
+            written here, it has served as a source of inspiration for me in one way or another.
+          </p>
           <div className="relative max-w-lg">
             <label>
               <span className="sr-only">Search </span>

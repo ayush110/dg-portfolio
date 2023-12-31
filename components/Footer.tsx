@@ -5,7 +5,7 @@ import { BsSpotify } from 'react-icons/bs'
 export default function Footer() {
   return (
     <footer>
-      <div className="text-xs text-zinc-400 ">
+      <div className="text-xs dark:font-normal  dark:text-zinc-400 ">
         <div className=" text-right">
           <Link
             className=" hover:text-black dark:hover:text-white"
