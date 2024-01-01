@@ -44,7 +44,7 @@ export const HeroSection = (
         </p>
       </div>
       <div>
-        <hr className="mt-20 mb-12 w-96"></hr>
+        <hr className="mt-20 mb-12 w-96 border-black dark:border-white"></hr>
         <Current />
       </div>
     </div>
