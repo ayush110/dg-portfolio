@@ -14,9 +14,9 @@ export default function Projects() {
           <div className=" shrink text-2xl leading-7  text-gray-900 dark:text-gray-100 md:max-w-xl">
             <p className="mb-8">Past Experiences</p>
           </div>
-          <div className=" pt-10 dark:font-light">
+          <div className=" dark:font-light sm:pt-10">
             {pastExperiencesData.map((d) => (
-              <div key={d.title} className="mb-8 flex">
+              <div key={d.title} className="mb-8 sm:flex">
                 {' '}
                 <Link
                   className="w-1/5 underline underline-offset-4"
@@ -24,7 +24,7 @@ export default function Projects() {
                 >
                   {d.title}
                 </Link>{' '}
-                <p className="w-4/5">{d.description}</p>
+                <p className="sm:w-4/5">{d.description}</p>
               </div>
             ))}
           </div>
